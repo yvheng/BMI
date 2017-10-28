@@ -33,13 +33,15 @@ public class MainActivity extends AppCompatActivity {
         weight = Double.parseDouble(wString);
 
         bmi = weight/(height*height);
-        textViewBMI.setText(""+bmi);
         if(bmi <= 18.5){
             imageView.setImageResource(R.drawable.under);
+            textViewBMI.setText("You're Underweight");
         }else if(bmi >= 25){
             imageView.setImageResource(R.drawable.over);
+            textViewBMI.setText("You're Overweight");
         }else{
             imageView.setImageResource(R.drawable.normal);
+            textViewBMI.setText("You're Normal weight");
         }
     }
 
